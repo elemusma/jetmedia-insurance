@@ -40,3 +40,23 @@
 } */
 
 /* end of intro */
+
+/* start of content */
+.section-content .col-icons-svg svg path {
+    fill: white !important;
+    transition: all 0s ease-in-out !important;
+}
+
+.section-content .col-icons-border {
+    border-color: white !important;
+}
+
+.section-content .col-icons-border:hover {
+    background: white !important;
+}
+
+.section-content .col-icons-border:hover svg path {
+    fill: var(--accent-primary) !important;
+}
+
+/* end of content */

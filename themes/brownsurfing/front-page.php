@@ -39,6 +39,28 @@ endwhile; endif;
 // end of intro
 
 // start of content
+if(have_rows('content_section')): while(have_rows('content_section')): the_row();
+$svgCode = get_sub_field('svg_icon');
+$content = get_sub_field('content');
+
+echo '<section class="pt-5 pb-5 position-relative bg-accent section-content">';
+echo '<div class="container">';
+echo '<div class="row justify-content-center">';
+echo '<div class="col-lg-7 col-md-10 text-white text-center col-icons" style="">';
+echo '<div class="m-auto w-auto col-icons-svg pb-4" style="">';
+echo '<div class="m-auto col-icons-border">';
+echo $svgCode;
+echo '</div>';
+echo '</div>';
+
+echo $content;
+
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</section>';
+
+endwhile; endif;
 // end of content
 
 
