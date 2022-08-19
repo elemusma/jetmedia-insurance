@@ -1,0 +1,42 @@
+/* start of header */
+.header-carousel .owl-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* end of header */
+
+/* start of intro */
+.col-icons-border {
+    border: 3px solid var(--accent-primary);
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .25s ease-in-out;
+}
+
+.col-icons-border:hover {
+    background: var(--accent-primary);
+}
+
+.col-icons-border:hover svg,
+.col-icons-border:hover svg path {
+    fill: white !important;
+}
+
+.col-icons-svg svg {
+    transition: all .25s ease-in-out;
+    height: 40px;
+    width: 40px;
+}
+
+/* .col-icons-svg svg path {
+    transition: all .15s ease-in-out;
+} */
+
+/* end of intro */

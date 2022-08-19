@@ -116,7 +116,7 @@ echo '<div class="header-carousel owl-carousel owl-theme">';
     echo '<div class="header-carousel-col overflow-h">';
     echo '<div class="position-relative">';
     // echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set">';
-    echo wp_get_attachment_image($image['id'], 'full','',['class'=>'w-100 header-carousel-img','style'=>'height:550px;object-fit:cover;'] );
+    echo wp_get_attachment_image($image['id'], 'full','',['class'=>'w-100 header-carousel-img','style'=>'height:575px;object-fit:cover;'] );
     // echo '</a>';
     echo '</div>';
     echo '</div>';
