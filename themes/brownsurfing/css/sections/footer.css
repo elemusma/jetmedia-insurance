@@ -1,0 +1,7 @@
+footer ul.menu>li>a {
+    background: white;
+    color: var(--accent-primary);
+    border-radius: 45px;
+    margin: 8px 18px 8px 0;
+    padding: 8px 18px;
+}
