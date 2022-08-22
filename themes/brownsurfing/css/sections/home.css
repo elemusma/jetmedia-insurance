@@ -9,6 +9,10 @@
 /* end of header */
 
 /* start of intro */
+.section-intro svg path.cls-1 {
+    fill: var(--accent-secondary);
+}
+
 .col-icons-border {
     border: 3px solid var(--accent-primary);
     border-radius: 50%;
