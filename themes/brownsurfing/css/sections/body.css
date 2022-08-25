@@ -142,6 +142,10 @@ input#searchsubmit:hover {
   background: var(--accent-secondary);
 }
 
+#searchform>div {
+  display: flex;
+}
+
 /* content */
 .alignleft {
   float: left;

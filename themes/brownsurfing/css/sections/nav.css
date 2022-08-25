@@ -35,9 +35,11 @@ ul.menu>li>a {
     font-family: unset; */
     display: block;
     transition: all .25s ease-in-out;
+    text-decoration: none;
 }
 
-ul.menu>li>a:hover {
+ul.menu>li>a:hover,
+.current-menu-item {
     background: var(--accent-primary);
 }
 

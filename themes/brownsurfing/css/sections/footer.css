@@ -1,3 +1,7 @@
+footer ul.menu>li {
+    background: none;
+}
+
 footer ul.menu>li>a {
     background: white;
     color: var(--accent-primary);
