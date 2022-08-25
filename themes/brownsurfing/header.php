@@ -52,7 +52,7 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 
-echo '<div class="bg-accent-secondary w-100">';
+echo '<div class="bg-accent-secondary w-100 mobile-hidden">';
 
 wp_nav_menu(array(
     'menu' => 'primary',
@@ -62,7 +62,7 @@ wp_nav_menu(array(
 echo '</div>';
 
 echo '<div id="navMenuOverlay" class="position-fixed z-2"></div>';
-echo '<div class="col-md-9 nav-items bg-white desktop-hidden" id="navItems">';
+echo '<div class="col-md-9 col-11 nav-items bg-white desktop-hidden" id="navItems">';
 
 echo '<div class="pt-5 pb-5">';
 echo '<div class="close-menu">';

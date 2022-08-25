@@ -17,7 +17,7 @@ $link_url = $link['url'];
 $link_title = $link['title'];
 $link_target = $link['target'] ? $link['target'] : '_self';
 
-echo '<div class="col-lg-2 col-md-3 text-center col-icons" style="">';
+echo '<div class="col-lg-2 col-md-3 text-center col-icons mb-md-0 mb-5" style="">';
 
 echo '<div class="m-auto w-auto col-icons-svg pb-4" style="">';
 echo '<div class="m-auto col-icons-border">';

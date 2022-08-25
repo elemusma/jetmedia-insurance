@@ -38,6 +38,10 @@ ul.menu>li>a {
     text-decoration: none;
 }
 
+#navItems ul.menu>li>a {
+    color: black;
+}
+
 ul.menu>li>a:hover,
 .current-menu-item {
     background: var(--accent-primary);
