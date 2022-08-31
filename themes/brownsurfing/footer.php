@@ -1,6 +1,6 @@
 <footer>
 <?php echo get_template_part('partials/si'); ?>
-<section class="bg-accent-secondary pt-5">
+<section class="bg-accent-secondary pt-5 pb-5">
 <div class="container">
 <div class="row">
 <?php 
@@ -16,7 +16,7 @@ echo '<div class="col-md-4">';
     echo get_field('map','options');
 echo '</div>';
 
-echo '<div class="col-md-4 text-white">';
+echo '<div class="col-md-6 text-white">';
 echo get_field('website_message','options'); 
 echo '</div>';
 
