@@ -92,7 +92,7 @@ echo '</div>';
 
 echo '</header>';
 
-if(!is_page() || is_front_page()):
+if(!is_page() || is_front_page() || !is_single()):
 echo '<section class="hero position-relative">';
 $globalPlaceholderImg = get_field('global_placeholder_image','options');
 if(is_page() && !is_front_page()){
@@ -126,46 +126,31 @@ echo '</div>';
     endif;
 
 endwhile; endif;
+}
 
-// echo '<div class="pt-5 pb-5 text-white text-center">';
-// echo '<div class="position-relative">';
-// echo '<div class="multiply overlay position-absolute w-100 h-100 bg-img"></div>';
-// echo '<div class="position-relative">';
-// echo '<div class="container">';
+
+
+// if(!is_front_page()) {
+// echo '<div class="container pt-5 pb-5 text-white text-center">';
 // echo '<div class="row">';
-// echo '<div class="col-12">';
-// echo '<h1 class="pt-3 pb-3 mb-0">' . get_the_title() . '</h1>';
+// echo '<div class="col-md-12">';
+// if(is_page() || !is_front_page()){
+// echo '<h1 class="">' . get_the_title() . '</h1>';
+// } elseif(is_single()){
+// echo '<h1 class="">' . get_single_post_title() . '</h1>';
+// } elseif(is_author()){
+// echo '<h1 class="">Author: ' . get_the_author() . '</h1>';
+// } elseif(is_tag()){
+// echo '<h1 class="">' . get_single_tag_title() . '</h1>';
+// } elseif(is_category()){
+// echo '<h1 class="">' . get_single_cat_title() . '</h1>';
+// } elseif(is_archive()){
+// echo '<h1 class="">' . get_archive_title() . '</h1>';
+// }
 // echo '</div>';
 // echo '</div>';
 // echo '</div>';
-// echo '</div>';
-// echo '</div>';
-// echo '</div>';
-}
-
-
-
-if(!is_front_page()) {
-echo '<div class="container pt-5 pb-5 text-white text-center">';
-echo '<div class="row">';
-echo '<div class="col-md-12">';
-if(is_page() || !is_front_page()){
-echo '<h1 class="">' . get_the_title() . '</h1>';
-} elseif(is_single()){
-echo '<h1 class="">' . get_single_post_title() . '</h1>';
-} elseif(is_author()){
-echo '<h1 class="">Author: ' . get_the_author() . '</h1>';
-} elseif(is_tag()){
-echo '<h1 class="">' . get_single_tag_title() . '</h1>';
-} elseif(is_category()){
-echo '<h1 class="">' . get_single_cat_title() . '</h1>';
-} elseif(is_archive()){
-echo '<h1 class="">' . get_archive_title() . '</h1>';
-}
-echo '</div>';
-echo '</div>';
-echo '</div>';
-}
+// }
 
 echo '</section>';
 endif;
