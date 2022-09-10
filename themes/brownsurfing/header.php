@@ -23,7 +23,7 @@ if(get_field('custom_css')) {
 <div class="nav">
 <div class="container">
 <div class="row align-items-center justify-content-between pb-4">
-<div class="col-lg-3 col-md-6">
+<div class="col-lg-3 col-md-6 col-7 pb-md-0 pb-4">
 <a href="<?php echo home_url(); ?>">
 <?php 
 $logo = get_field('logo','options'); 

@@ -20,7 +20,7 @@ $link_title = $link['title'];
 $link_target = $link['target'] ? $link['target'] : '_self';
 endif;
 
-echo '<div class="col-lg-2 col-md-3 text-center col-icons mb-5" style="">';
+echo '<div class="col-lg-2 col-md-3 col-6 text-center col-icons mb-5" style="">';
 
 echo '<div class="m-auto w-auto col-icons-svg pb-4" style="">';
 echo '<div class="m-auto col-icons-border">';
@@ -109,7 +109,7 @@ if( $blogPosts ):
         foreach( $blogPosts as $post ): 
         // Setup this post for WP functions (variable must be named $post).
         setup_postdata($post);
-        echo '<div class="col-md-4 col-icons" style="">';
+        echo '<div class="col-md-4 mb-4" style="">';
         echo '<div class="position-relative bg-white">';
         echo '<a href="' . get_the_permalink() . '">';
         echo '<div class="position-relative overflow-h img-hover w-100" style="cursor:pointer;">';
