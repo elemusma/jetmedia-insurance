@@ -4,7 +4,7 @@
 <div class="container">
 <div class="row">
 <?php 
-echo '<div class="col-md-2 text-center pb-5">';
+echo '<div class="col-lg-2 col-md-4 text-center pb-5">';
 
 wp_nav_menu(array(
     'menu' => 'footer',
@@ -12,11 +12,11 @@ wp_nav_menu(array(
     ));
     
 echo '</div>';
-echo '<div class="col-md-4">';
+echo '<div class="col-lg-4 col-md-6">';
     echo get_field('map','options');
 echo '</div>';
 
-echo '<div class="col-md-6 text-white">';
+echo '<div class="col-lg-6 col-12 text-white">';
 echo get_field('website_message','options'); 
 echo '</div>';
 

@@ -20,7 +20,7 @@ $link_title = $link['title'];
 $link_target = $link['target'] ? $link['target'] : '_self';
 endif;
 
-echo '<div class="col-lg-2 col-md-3 col-6 text-center col-icons mb-5" style="">';
+echo '<div class="col-lg-2 col-md-4 col-6 text-center col-icons mb-5" style="">';
 
 echo '<div class="m-auto w-auto col-icons-svg pb-4" style="">';
 echo '<div class="m-auto col-icons-border">';
@@ -94,17 +94,22 @@ endwhile; endif;
 
 // start of blog
 if(have_rows('blog_content')): while(have_rows('blog_content')): the_row();
+$blogPosts = get_sub_field('blog_posts');
+
+if(get_sub_field('content') || $blogPosts):
 echo '<section class="pt-5 pb-5 position-relative bg-accent section-content">';
 echo '<div class="container">';
 echo '<div class="row">';
 if(get_sub_field('content')):
-    echo '<div class="col-md-9 text-white pb-4">';
+    echo '<div class="col-md-9 text-white">';
     echo get_sub_field('content');
     echo '</div>';
+    if( $blogPosts ):
+        echo '<div class="col-12 pb-4"></div>';
+    endif;
 endif;
 echo '</div>';
 
-$blogPosts = get_sub_field('blog_posts');
 
 if( $blogPosts ):
     echo '<div class="row justify-content-center">';
@@ -139,6 +144,8 @@ endif;
 
 echo '</div>';
 echo '</section>';
+endif;
+
 endwhile; endif;
 // end of blog
 
