@@ -97,9 +97,11 @@ if(have_rows('blog_content')): while(have_rows('blog_content')): the_row();
 echo '<section class="pt-5 pb-5 position-relative bg-accent section-content">';
 echo '<div class="container">';
 echo '<div class="row">';
-echo '<div class="col-md-9 text-white pb-4">';
-echo get_sub_field('content');
-echo '</div>';
+if(get_sub_field('content')):
+    echo '<div class="col-md-9 text-white pb-4">';
+    echo get_sub_field('content');
+    echo '</div>';
+endif;
 echo '</div>';
 
 $blogPosts = get_sub_field('blog_posts');

@@ -33,7 +33,7 @@ echo '<section class="bg-black text-white pt-2 pb-2">';
 echo '<div class="container">';
 echo '<div class="row">';
 echo '<div class="col-12">';
-echo '<p class="mb-0"><small><em>Copyright ©2022. Please do not copy any of the text, images or any of the other <a title="Affordable custom website development and design in Denver" href="https://brownsurfing.com/" target="_blank" rel="nofollow noreferrer noopener" class="text-white">website development</a>\'s work.</em></small></p>';
+echo '<p class="mb-0"><small><em>Copyright ©2022. Please do not copy any of the text, images or any of the other content in this website.</em></small></p>';
 
 
 
