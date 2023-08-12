@@ -26,6 +26,7 @@ class WPSEO_Tracking_Settings_Data implements WPSEO_Collection {
 		'alternate_website_name',
 		'company_logo',
 		'company_name',
+		'company_alternate_name',
 		'person_name',
 		'person_logo',
 		'person_logo_id',
@@ -45,6 +46,7 @@ class WPSEO_Tracking_Settings_Data implements WPSEO_Collection {
 		'open_graph_frontpage_image',
 		'open_graph_frontpage_image_id',
 		'other_social_urls',
+		'mastodon_url',
 		'pinterest_url',
 		'pinterestverify',
 		'twitter_site',
@@ -54,6 +56,18 @@ class WPSEO_Tracking_Settings_Data implements WPSEO_Collection {
 		'zapier_api_key',
 		'wincher_tokens',
 		'wincher_website_id',
+		'least_readability_ignore_list',
+		'least_seo_score_ignore_list',
+		'most_linked_ignore_list',
+		'least_linked_ignore_list',
+		'indexables_page_reading_list',
+		'publishing_principles_id',
+		'ownership_funding_info_id',
+		'actionable_feedback_policy_id',
+		'corrections_policy_id',
+		'ethics_policy_id',
+		'diversity_policy_id',
+		'diversity_staffing_report_id',
 	];
 
 	/**
@@ -167,6 +181,7 @@ class WPSEO_Tracking_Settings_Data implements WPSEO_Collection {
 		'twitter_card_type',
 		'youtube_url',
 		'wikipedia_url',
+		'mastodon_url',
 		'indexables_indexing_completed',
 		'semrush_integration_active',
 		'semrush_tokens',
@@ -209,7 +224,13 @@ class WPSEO_Tracking_Settings_Data implements WPSEO_Collection {
 		'search_cleanup_emoji',
 		'search_cleanup_patterns',
 		'search_character_limit',
+		'redirect_search_pretty_urls',
 		'wordproof_integration_active',
+		'indexables_overview_state',
+		'deny_search_crawling',
+		'deny_wp_json_crawling',
+		'deny_adsbot_crawling',
+		'last_known_no_unindexed',
 	];
 
 	/**

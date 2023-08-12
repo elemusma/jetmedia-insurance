@@ -3,13 +3,14 @@
  * Plugin Name: PublishPress Blocks
  * Plugin URI: https://publishpress.com/blocks/
  * Description: PublishPress Blocks has everything you need to build professional websites with the Gutenberg editor.
- * Version: 2.14.2
- * Tested up to: 6.0.1
+ * Version: 3.1.6
  * Author: PublishPress
  * Author URI: https://publishpress.com/
- * License: GPL2
  * Text Domain: advanced-gutenberg
  * Domain Path: /languages
+ * Requires at least: 5.5
+ * Requires PHP: 7.2.5
+ * License: GPL2
  */
 
 /**
@@ -17,7 +18,7 @@
  *
  * @copyright 2014-2020  Joomunited
  * @copyright 2020       Advanced Gutenberg. help@advancedgutenberg.com
- * @copyright 2020-2022  PublishPress. help@publishpress.com
+ * @copyright 2020-2023  PublishPress. help@publishpress.com
  *
  *  Original development of this plugin was kindly funded by Joomunited
  *
@@ -38,11 +39,24 @@
 
 defined('ABSPATH') || die;
 
+global $wp_version;
+
+$min_php_version = '7.2.5';
+$min_wp_version  = '5.5';
+
+// If the PHP or WP version is not compatible, terminate the plugin execution.
+$invalid_php_version    = version_compare(phpversion(), $min_php_version, '<');
+$invalid_wp_version     = version_compare($wp_version, $min_wp_version, '<');
+
+if ($invalid_php_version || $invalid_wp_version) {
+    return;
+}
+
 $includeFilebRelativePath = '/publishpress/publishpress-instance-protection/include.php';
 if (file_exists(__DIR__ . '/vendor' . $includeFilebRelativePath)) {
     require_once __DIR__ . '/vendor' . $includeFilebRelativePath;
-} else if (defined('PP_AUTHORS_VENDOR_PATH') && file_exists(PP_AUTHORS_VENDOR_PATH . $includeFilebRelativePath)) {
-    require_once PP_AUTHORS_VENDOR_PATH . $includeFilebRelativePath;
+} else if (defined('ADVANCED_GUTENBERG_VENDOR_PATH') && file_exists(ADVANCED_GUTENBERG_VENDOR_PATH . $includeFilebRelativePath)) {
+    require_once ADVANCED_GUTENBERG_VENDOR_PATH . $includeFilebRelativePath;
 }
 
 if (class_exists('PublishPressInstanceProtection\\Config')) {
@@ -56,15 +70,20 @@ if (class_exists('PublishPressInstanceProtection\\Config')) {
 if (! defined('ADVANCED_GUTENBERG_LOADED')) {
 
     if (! defined('ADVANCED_GUTENBERG_VERSION')) {
-        define('ADVANCED_GUTENBERG_VERSION', '2.14.2');
+        define('ADVANCED_GUTENBERG_VERSION', '3.1.6');
     }
 
     if (! defined('ADVANCED_GUTENBERG_PLUGIN')) {
         define('ADVANCED_GUTENBERG_PLUGIN', __FILE__);
     }
 
-    // Code shared with Pro version
-    require_once __DIR__ . '/init.php';
+    if ( ! defined( 'ADVANCED_GUTENBERG_BASE_PATH' ) ) {
+        define( 'ADVANCED_GUTENBERG_BASE_PATH', __DIR__ );
+    }
+
+    if ( ! defined( 'ADVANCED_GUTENBERG_VENDOR_PATH' ) ) {
+        define( 'ADVANCED_GUTENBERG_VENDOR_PATH', ADVANCED_GUTENBERG_BASE_PATH . '/vendor/' );
+    }
 
     // Vendor and Ask-for-Review
     if(
@@ -80,7 +99,18 @@ if (! defined('ADVANCED_GUTENBERG_LOADED')) {
         if( file_exists(__DIR__ . '/review/review-request.php') ) {
             require_once __DIR__ . '/review/review-request.php';
         }
+
+        // Display ads for Pro version
+        if ( ! defined( 'PP_VERSION_NOTICES_LOADED' ) ) {
+            $noticesPath = __DIR__ . '/vendor/publishpress/wordpress-version-notices/includes.php';
+            if ( file_exists( $noticesPath ) ) {
+                require_once $noticesPath;
+            }
+        }
     }
+
+    // Code shared with Pro version
+    require_once __DIR__ . '/init.php';
 
     define('ADVANCED_GUTENBERG_LOADED', true);
 }

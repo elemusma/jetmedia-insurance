@@ -18,15 +18,15 @@ input.gform_button.button:hover {
   border-color: var(--accent-secondary);
 }
 
-.gform_footer.top_label {
+/* .gform_footer.top_label {
   margin-bottom: -90px !important;
-}
+} */
 
-input,
+/* input,
 textarea {
   box-shadow: inset 1px 1px 8px #eaeaea !important;
   border: none;
-}
+} */
 
 input[type=file] {
   box-shadow: none !important;
@@ -34,10 +34,12 @@ input[type=file] {
 
 /* custom form */
 input,
+input.datepicker,
+select.gfield_select,
 textarea {
-  width: 100%;
+  width: 100% !important;
   border: 1px solid #eaeaea;
-  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .5);
+  box-shadow: inset 1px 1px 8px #eaeaea !important;
   padding: 5px 15px;
   outline-color: var(--accent-primary);
 }

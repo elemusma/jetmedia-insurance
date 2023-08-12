@@ -2,10 +2,28 @@
     border: 2px solid var(--accent-primary);
     border-radius: 0;
     padding: 5px 25px;
-    transition:all .25s ease-in-out;
+    transition: all .25s ease-in-out;
 }
+
 .bg-accent-outline:hover {
     border: 2px solid var(--accent-primary);
-    background:var(--accent-primary);
-    color:white;
+    background: var(--accent-primary);
+    color: white;
+}
+
+.btn-main {
+    background-color: var(--accent-primary);
+    color: #fff;
+    border-radius: 9999px;
+    box-shadow: none;
+    text-decoration: none;
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    font-size: 1.125em;
+    transition: all .25s ease-in-out;
+}
+
+.btn-main:hover {
+    background-color: var(--accent-secondary);
+    color: white;
+    text-decoration: none;
 }

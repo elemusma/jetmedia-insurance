@@ -4,11 +4,11 @@
 <div class="container">
 <div class="row">
 <?php 
-echo '<div class="col-lg-2 col-md-4 text-center pb-5">';
+echo '<div class="col-12 text-center pb-5">';
 
 wp_nav_menu(array(
     'menu' => 'footer',
-    'menu_class'=>'menu  list-unstyled text-white text-uppercase'
+    'menu_class'=>'menu  list-unstyled text-white text-uppercase d-flex justify-content-center'
     ));
     
 echo '</div>';
@@ -16,7 +16,7 @@ echo '<div class="col-lg-4 col-md-6">';
     echo get_field('map','options');
 echo '</div>';
 
-echo '<div class="col-lg-6 col-12 text-white">';
+echo '<div class="col-lg-8 col-12 text-white">';
 echo get_field('website_message','options'); 
 echo '</div>';
 
@@ -33,7 +33,7 @@ echo '<section class="bg-black text-white pt-2 pb-2">';
 echo '<div class="container">';
 echo '<div class="row">';
 echo '<div class="col-12">';
-echo '<p class="mb-0"><small><em>Copyright ©2022. Please do not copy any of the text, images or any of the other content in this website.</em></small></p>';
+echo '<p class="mb-0"><small><em>Copyright ©' . date("Y") . '. Please do not copy any of the text, images or any of the other content in this website.</em></small></p>';
 
 
 
