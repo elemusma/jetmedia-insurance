@@ -8,11 +8,11 @@ echo '<div class="col-12 text-center pb-5">';
 
 wp_nav_menu(array(
     'menu' => 'footer',
-    'menu_class'=>'menu  list-unstyled text-white text-uppercase d-flex justify-content-center'
+    'menu_class'=>'menu list-unstyled text-white text-uppercase d-flex flex-wrap justify-content-center'
     ));
     
 echo '</div>';
-echo '<div class="col-lg-4 col-md-6">';
+echo '<div class="col-lg-4 col-md-6 pb-md-0 pb-5">';
     echo get_field('map','options');
 echo '</div>';
 
